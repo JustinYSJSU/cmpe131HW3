@@ -6,8 +6,7 @@ myApp = Flask(__name__)
 def home():
  name = "Lisa"
  city_names = ["Paris", "London", "Rome", "Tahiti"] 
- 
- return '''
+ html = '''
  <html>
   <head>
    <title> Home Page </title>
@@ -17,14 +16,13 @@ def home():
   <p> <a href="www.google.com"> not google </a> </p>
  
   <ul>
-    <li> '''+city_names[0]+'''</li>
-    <li> '''+city_names[1]+'''</li>
-    <li> '''+city_names[2]+'''</li>
-    <li> '''+city_names[3]+'''</li>
-  </ul>
+  
+  </ul> 
  </body>
 </html>
   '''
-
+ for city in city_names:
+  html += '''<li> '''+city+''' </li>'''
+ return html
 
 #myApp.run()
