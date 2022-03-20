@@ -1,3 +1,4 @@
+
 from flask import Flask
 
 myApp = Flask(__name__)
@@ -13,16 +14,13 @@ def home():
   </head>
   <body>
   <h1> Welcome ''' + name + '''!</h1>
-  <p> <a href="www.google.com"> not google </a> </p>
- 
-  <ul>
-  
-  </ul> 
+  <p> <a href="www.google.com"> not google </a> </p> 
  </body>
+  
 </html>
   '''
  for city in city_names:
-  html += '''<li> '''+city+''' </li>'''
+  html += '''<ul> <li> '''+city+''' </li> </ul>'''
  return html
 
-#myApp.run()
+myApp.run()
