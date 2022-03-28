@@ -1,6 +1,12 @@
 from app import myApp
-from app.enter import CityNameForm
 from flask import render_template, flash
+from flask_wtf import FlaskForm
+from wtforms import StringField, SubmitField
+from wtforms.validators import DataRequired
+
+class CityNameForm(FlaskForm):
+ city_name = StringField('City Name', validators = [DataRequired()])
+ submit = SubmitField('Submit')
 
 
 name = "Lisa"
