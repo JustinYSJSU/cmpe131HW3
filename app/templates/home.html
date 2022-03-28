@@ -4,8 +4,7 @@
  <head>
   <title> Home Page </title>
  </head>
- <body>
-   
+ <body>   
   {% with messages = get_flashed_messages() %}
   {% if messages %}
    <ul>
@@ -15,7 +14,6 @@
    </ul>
   {% endif %}
   {% endwith %}
-
   <h1> Welcome {{name}}!</h1>
   <p> <a href = "www.google.com"> not google </a> </p>
   <ul>
@@ -23,7 +21,6 @@
    <li> {{city}} </li>
   {% endfor %}
   </ul>
- 
   <formaction = "" method = "post" novalidate>
    {{form.hidden_tag()}}
   <p>
@@ -34,7 +31,5 @@
   {{form.submit()}}
   </p>
  </form>
- 
 </body>
- 
 </html>
