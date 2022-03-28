@@ -24,4 +24,4 @@ def home():
   html += '''<ul> <li> '''+city+''' </li> </ul>'''
  return html
 
-myApp.run()
+#myApp.run()
